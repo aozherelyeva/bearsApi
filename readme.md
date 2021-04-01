@@ -8,5 +8,7 @@ Then run the image on your local machine using the 80th port:
 
 Then open `http://localhost/info` in your browser.
 
+When running tests, you can use parameter `--bear_id=X` (where X is an integer) in the command line - thus, you can run the tests for a specific bear ID.
+
 Test cases can be found below: 
 https://docs.google.com/spreadsheets/d/1LuSYvZfpxcArIlg4sWxpLzrl37Fo3vIgC8ODPSc1qU0/edit?usp=sharing
