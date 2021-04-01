@@ -1,6 +1,6 @@
 import json
 
-import bear_api
+from bear_api import get_one_bear, get_bears_list
 from jsonschema import validate
 
 schema_all = {
@@ -24,14 +24,14 @@ schema_single = {
 
 
 def test_get_bears_list():
-    response = bear_api.get_bears_list()
+    response = get_bears_list()
     assert response.status_code == 200, f"Status code is wrong, expected 200, got {response.status_code}"
     body = json.loads(response.text)
     validate(instance=body, schema=schema_all)
 
 
 def test_get_one_bear(bear_id):
-    response = bear_api.get_one_bear(bear_id)
+    response = get_one_bear(bear_id)
     assert response.status_code == 200, f"Status code is wrong, expected 200, got {response.status_code}"
     body = json.loads(response.text)
     validate(instance=body, schema=schema_single)
