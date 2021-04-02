@@ -50,7 +50,7 @@ def test_crud_bears(path):
     assert bear_info.get("bear_age") == f"{BEAR_AGE}"
 
     update_bear(new_bear, new_bear_data)
-    l
+    
     assert update_bear(new_bear,
                        new_bear_data).status_code == 200, f"Status code is wrong, expected 200, " \
                                                           f"got {update_bear(new_bear, new_bear_data).status_code}"
