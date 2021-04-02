@@ -28,7 +28,7 @@ schema_single = {
 
 @pytest.mark.parametrize('path', ["/bear", "/bear/2"])
 def test_crud_bears(path):
-    bears = get_bears_list().response().text
+    bears = get_bears_list().text
     if bears == "[]":
         pass
     else:
